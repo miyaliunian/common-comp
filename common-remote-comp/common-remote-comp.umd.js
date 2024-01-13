@@ -108,7 +108,15 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
+  Component: function() { return /* reexport */ button_button; },
   "default": function() { return /* binding */ entry_lib; }
+});
+
+// NAMESPACE OBJECT: ./packages/index.js
+var packages_namespaceObject = {};
+__webpack_require__.r(packages_namespaceObject);
+__webpack_require__.d(packages_namespaceObject, {
+  w: function() { return button_button; }
 });
 
 ;// CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js
@@ -1259,18 +1267,31 @@ var component = normalizeComponent(
 )
 
 /* harmony default export */ var button_button = (component.exports);
+;// CONCATENATED MODULE: ./packages/package.json
+var package_namespaceObject = JSON.parse('{"u":"common-remote-comp"}');
 ;// CONCATENATED MODULE: ./packages/index.js
 
-const comps = [button_button];
-/* harmony default export */ var packages_0 = (Vue => {
-  comps.forEach(comp => {
-    Vue.component(comp.name, comp);
-  });
-});
+
+
+// const comps = [
+//     DButton
+// ]
+
+// export default (Vue) => {
+//   comps.forEach((comp) => {
+//     Vue.component(comp.name, comp);
+//   });
+// };
+button_button.install = function (Vue) {
+  Vue.component(`${package_namespaceObject.u}`, button_button);
+};
+
+// 默认导出组件
+
 ;// CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
 
 
-/* harmony default export */ var entry_lib = (packages_0);
+/* harmony default export */ var entry_lib = (packages_namespaceObject["default"]);
 
 
 }();
