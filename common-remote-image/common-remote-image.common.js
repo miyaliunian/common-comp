@@ -111,7 +111,7 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/babel-loader/lib/index.js!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./packages/image/image.vue?vue&type=template&id=3dc9d91e
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/babel-loader/lib/index.js!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./packages/image/image.vue?vue&type=template&id=0f9ebf0a
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -1104,20 +1104,10 @@ var component = normalizeComponent(
 )
 
 /* harmony default export */ var image_image = (component.exports);
-;// CONCATENATED MODULE: ./packages/package.json
+;// CONCATENATED MODULE: ./packages/image/package.json
 var package_namespaceObject = JSON.parse('{"u":"common-remote-image"}');
-;// CONCATENATED MODULE: ./packages/index.js
-// import Component from "./button/button.vue";
-// import config from './package.json'
-// Component.install = function (Vue) {
-//   Vue.component(`${config.name}`, Component);
-// };
-
-// // 默认导出组件
-// export {
-//   Component,
-// };
-
+;// CONCATENATED MODULE: ./packages/image/index.js
+// DImage
 
 
 image_image.install = function (Vue) {

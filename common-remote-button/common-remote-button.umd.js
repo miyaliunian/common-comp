@@ -1,4 +1,14 @@
-/******/ (function() { // webpackBootstrap
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory(require("vue"));
+	else if(typeof define === 'function' && define.amd)
+		define([], factory);
+	else if(typeof exports === 'object')
+		exports["common-remote-button"] = factory(require("vue"));
+	else
+		root["common-remote-button"] = factory(root["Vue"]);
+})((typeof self !== 'undefined' ? self : this), function(__WEBPACK_EXTERNAL_MODULE__203__) {
+return /******/ (function() { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
@@ -7,6 +17,13 @@
 
 function _extends(){return _extends=Object.assign?Object.assign.bind():function(a){for(var b,c=1;c<arguments.length;c++)for(var d in b=arguments[c],b)Object.prototype.hasOwnProperty.call(b,d)&&(a[d]=b[d]);return a},_extends.apply(this,arguments)}var normalMerge=["attrs","props","domProps"],toArrayMerge=["class","style","directives"],functionalMerge=["on","nativeOn"],mergeJsxProps=function(a){return a.reduce(function(c,a){for(var b in a)if(!c[b])c[b]=a[b];else if(-1!==normalMerge.indexOf(b))c[b]=_extends({},c[b],a[b]);else if(-1!==toArrayMerge.indexOf(b)){var d=c[b]instanceof Array?c[b]:[c[b]],e=a[b]instanceof Array?a[b]:[a[b]];c[b]=[].concat(d,e)}else if(-1!==functionalMerge.indexOf(b)){for(var f in a[b])if(c[b][f]){var g=c[b][f]instanceof Array?c[b][f]:[c[b][f]],h=a[b][f]instanceof Array?a[b][f]:[a[b][f]];c[b][f]=[].concat(g,h)}else c[b][f]=a[b][f];}else if("hook"===b)for(var i in a[b])c[b][i]=c[b][i]?mergeFn(c[b][i],a[b][i]):a[b][i];else c[b]=a[b];return c},{})},mergeFn=function(a,b){return function(){a&&a.apply(this,arguments),b&&b.apply(this,arguments)}};module.exports=mergeJsxProps;
 
+
+/***/ }),
+
+/***/ 203:
+/***/ (function(module) {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE__203__;
 
 /***/ })
 
@@ -91,7 +108,7 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  Component: function() { return /* reexport */ switch_switch; }
+  Component: function() { return /* reexport */ button_button; }
 });
 
 ;// CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js
@@ -111,35 +128,57 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/babel-loader/lib/index.js!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./packages/switch/switch.vue?vue&type=template&id=73eb97f2
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/babel-loader/lib/index.js!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./packages/button/button.vue?vue&type=template&id=76381a5b
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
-  return _c('van-switch', _vm._g(_vm._b({
-    model: {
-      value: _vm.checked,
-      callback: function ($$v) {
-        _vm.checked = $$v;
-      },
-      expression: "checked"
+  return _c('div', [_c('van-button', _vm._g({
+    attrs: {
+      "type": "primary"
     }
-  }, 'van-switch', _vm.$attrs, false), _vm.$listeners));
+  }, _vm.$listeners), [_vm._v(_vm._s(_vm.desc))])], 1);
 };
 var staticRenderFns = [];
 
 ;// CONCATENATED MODULE: ./node_modules/vant/es/style/base.css
 // extracted by mini-css-extract-plugin
 
+;// CONCATENATED MODULE: ./node_modules/vant/es/info/index.css
+// extracted by mini-css-extract-plugin
+
+;// CONCATENATED MODULE: ./node_modules/vant/es/icon/index.css
+// extracted by mini-css-extract-plugin
+
 ;// CONCATENATED MODULE: ./node_modules/vant/es/loading/index.css
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./node_modules/vant/es/switch/index.css
+;// CONCATENATED MODULE: ./node_modules/vant/es/button/index.css
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./node_modules/vant/es/switch/style/index.js
+;// CONCATENATED MODULE: ./node_modules/vant/es/button/style/index.js
 
 
 
+
+
+;// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/extends.js
+function extends_extends() {
+  extends_extends = Object.assign ? Object.assign.bind() : function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+    return target;
+  };
+  return extends_extends.apply(this, arguments);
+}
+// EXTERNAL MODULE: ./node_modules/@vue/babel-helper-vue-jsx-merge-props/dist/helper.js
+var helper = __webpack_require__(568);
+var helper_default = /*#__PURE__*/__webpack_require__.n(helper);
 ;// CONCATENATED MODULE: ./node_modules/vant/es/utils/create/bem.js
 /**
  * bem helper
@@ -180,9 +219,9 @@ function createBEM(name) {
     return "" + el + gen(el, mods);
   };
 }
-;// CONCATENATED MODULE: external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
-var external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject = require("vue");
-var external_commonjs_vue_commonjs2_vue_root_Vue_default = /*#__PURE__*/__webpack_require__.n(external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject);
+// EXTERNAL MODULE: external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
+var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__(203);
+var external_commonjs_vue_commonjs2_vue_root_Vue_default = /*#__PURE__*/__webpack_require__.n(external_commonjs_vue_commonjs2_vue_root_Vue_);
 ;// CONCATENATED MODULE: ./node_modules/vant/es/utils/index.js
 
 
@@ -527,6 +566,111 @@ function createNamespace(name) {
   name = 'van-' + name;
   return [createComponent(name), createBEM(name), createI18N(name)];
 }
+;// CONCATENATED MODULE: ./node_modules/vant/es/utils/functional.js
+
+
+var inheritKey = ['ref', 'key', 'style', 'class', 'attrs', 'refInFor', 'nativeOn', 'directives', 'staticClass', 'staticStyle'];
+var mapInheritKey = {
+  nativeOn: 'on'
+}; // inherit partial context, map nativeOn to on
+
+function inherit(context, inheritListeners) {
+  var result = inheritKey.reduce(function (obj, key) {
+    if (context.data[key]) {
+      obj[mapInheritKey[key] || key] = context.data[key];
+    }
+
+    return obj;
+  }, {});
+
+  if (inheritListeners) {
+    result.on = result.on || {};
+
+    extends_extends(result.on, context.data.on);
+  }
+
+  return result;
+} // emit event
+
+function emit(context, eventName) {
+  for (var _len = arguments.length, args = new Array(_len > 2 ? _len - 2 : 0), _key = 2; _key < _len; _key++) {
+    args[_key - 2] = arguments[_key];
+  }
+
+  var listeners = context.listeners[eventName];
+
+  if (listeners) {
+    if (Array.isArray(listeners)) {
+      listeners.forEach(function (listener) {
+        listener.apply(void 0, args);
+      });
+    } else {
+      listeners.apply(void 0, args);
+    }
+  }
+} // mount functional component
+
+function mount(Component, data) {
+  var instance = new Vue({
+    el: document.createElement('div'),
+    props: Component.props,
+    render: function render(h) {
+      return h(Component, _extends({
+        props: this.$props
+      }, data));
+    }
+  });
+  document.body.appendChild(instance.$el);
+  return instance;
+}
+;// CONCATENATED MODULE: ./node_modules/vant/es/utils/constant.js
+// color
+var RED = '#ee0a24'; // border
+
+var BORDER = 'van-hairline';
+var BORDER_TOP = BORDER + "--top";
+var BORDER_LEFT = BORDER + "--left";
+var BORDER_BOTTOM = BORDER + "--bottom";
+var BORDER_SURROUND = BORDER + "--surround";
+var BORDER_TOP_BOTTOM = BORDER + "--top-bottom";
+var BORDER_UNSET_TOP_BOTTOM = BORDER + "-unset--top-bottom";
+;// CONCATENATED MODULE: ./node_modules/vant/es/utils/router.js
+/**
+ * Vue Router support
+ */
+function isRedundantNavigation(err) {
+  return err.name === 'NavigationDuplicated' || // compatible with vue-router@3.3
+  err.message && err.message.indexOf('redundant navigation') !== -1;
+}
+
+function route(router, config) {
+  var to = config.to,
+      url = config.url,
+      replace = config.replace;
+
+  if (to && router) {
+    var promise = router[replace ? 'replace' : 'push'](to);
+    /* istanbul ignore else */
+
+    if (promise && promise.catch) {
+      promise.catch(function (err) {
+        if (err && !isRedundantNavigation(err)) {
+          throw err;
+        }
+      });
+    }
+  } else if (url) {
+    replace ? location.replace(url) : location.href = url;
+  }
+}
+function functionalRoute(context) {
+  route(context.parent && context.parent.$router, context.props);
+}
+var routeProps = {
+  url: String,
+  replace: Boolean,
+  to: [String, Object]
+};
 ;// CONCATENATED MODULE: ./node_modules/vant/es/utils/validate/number.js
 function isNumeric(val) {
   return /^\d+(\.\d+)?$/.test(val);
@@ -599,135 +743,119 @@ function unitToPx(value) {
 
   return parseFloat(value);
 }
-;// CONCATENATED MODULE: ./node_modules/vant/es/switch/shared.js
-/**
- * Common Switch Props
- */
-var switchProps = {
+;// CONCATENATED MODULE: ./node_modules/vant/es/info/index.js
+
+// Utils
+
+ // Types
+
+var _createNamespace = createNamespace('info'),
+    info_createComponent = _createNamespace[0],
+    bem = _createNamespace[1];
+
+function Info(h, props, slots, ctx) {
+  var dot = props.dot,
+      info = props.info;
+  var showInfo = isDef(info) && info !== '';
+
+  if (!dot && !showInfo) {
+    return;
+  }
+
+  return h("div", helper_default()([{
+    "class": bem({
+      dot: dot
+    })
+  }, inherit(ctx, true)]), [dot ? '' : props.info]);
+}
+
+Info.props = {
+  dot: Boolean,
+  info: [Number, String]
+};
+/* harmony default export */ var info = (info_createComponent(Info));
+;// CONCATENATED MODULE: ./node_modules/vant/es/icon/index.js
+
+// Utils
+
+ // Components
+
+ // Types
+
+var icon_createNamespace = createNamespace('icon'),
+    icon_createComponent = icon_createNamespace[0],
+    icon_bem = icon_createNamespace[1];
+
+function isImage(name) {
+  return name ? name.indexOf('/') !== -1 : false;
+} // compatible with legacy usage, should be removed in next major version
+
+
+var LEGACY_MAP = {
+  medel: 'medal',
+  'medel-o': 'medal-o',
+  'calender-o': 'calendar-o'
+};
+
+function correctName(name) {
+  return name && LEGACY_MAP[name] || name;
+}
+
+function Icon(h, props, slots, ctx) {
+  var _props$badge;
+
+  var name = correctName(props.name);
+  var imageIcon = isImage(name);
+
+  if (false) {}
+
+  return h(props.tag, helper_default()([{
+    "class": [props.classPrefix, imageIcon ? '' : props.classPrefix + "-" + name],
+    "style": {
+      color: props.color,
+      fontSize: addUnit(props.size)
+    }
+  }, inherit(ctx, true)]), [slots.default && slots.default(), imageIcon && h("img", {
+    "class": icon_bem('image'),
+    "attrs": {
+      "src": name
+    }
+  }), h(info, {
+    "attrs": {
+      "dot": props.dot,
+      "info": (_props$badge = props.badge) != null ? _props$badge : props.info
+    }
+  })]);
+}
+
+Icon.props = {
+  dot: Boolean,
+  name: String,
   size: [Number, String],
-  value: null,
-  loading: Boolean,
-  disabled: Boolean,
-  activeColor: String,
-  inactiveColor: String,
-  activeValue: {
-    type: null,
-    default: true
+  // @deprecated
+  // should be removed in next major version
+  info: [Number, String],
+  badge: [Number, String],
+  color: String,
+  tag: {
+    type: String,
+    default: 'i'
   },
-  inactiveValue: {
-    type: null,
-    default: false
+  classPrefix: {
+    type: String,
+    default: icon_bem()
   }
 };
-;// CONCATENATED MODULE: ./node_modules/vant/es/mixins/field.js
-var FieldMixin = {
-  inject: {
-    vanField: {
-      default: null
-    }
-  },
-  watch: {
-    value: function value() {
-      var field = this.vanField;
-
-      if (field) {
-        field.resetValidation();
-        field.validateWithTrigger('onChange');
-      }
-    }
-  },
-  created: function created() {
-    var field = this.vanField;
-
-    if (field && !field.children) {
-      field.children = this;
-    }
-  }
-};
-// EXTERNAL MODULE: ./node_modules/@vue/babel-helper-vue-jsx-merge-props/dist/helper.js
-var helper = __webpack_require__(568);
-var helper_default = /*#__PURE__*/__webpack_require__.n(helper);
-;// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/extends.js
-function extends_extends() {
-  extends_extends = Object.assign ? Object.assign.bind() : function (target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-    return target;
-  };
-  return extends_extends.apply(this, arguments);
-}
-;// CONCATENATED MODULE: ./node_modules/vant/es/utils/functional.js
-
-
-var inheritKey = ['ref', 'key', 'style', 'class', 'attrs', 'refInFor', 'nativeOn', 'directives', 'staticClass', 'staticStyle'];
-var mapInheritKey = {
-  nativeOn: 'on'
-}; // inherit partial context, map nativeOn to on
-
-function inherit(context, inheritListeners) {
-  var result = inheritKey.reduce(function (obj, key) {
-    if (context.data[key]) {
-      obj[mapInheritKey[key] || key] = context.data[key];
-    }
-
-    return obj;
-  }, {});
-
-  if (inheritListeners) {
-    result.on = result.on || {};
-
-    extends_extends(result.on, context.data.on);
-  }
-
-  return result;
-} // emit event
-
-function emit(context, eventName) {
-  for (var _len = arguments.length, args = new Array(_len > 2 ? _len - 2 : 0), _key = 2; _key < _len; _key++) {
-    args[_key - 2] = arguments[_key];
-  }
-
-  var listeners = context.listeners[eventName];
-
-  if (listeners) {
-    if (Array.isArray(listeners)) {
-      listeners.forEach(function (listener) {
-        listener.apply(void 0, args);
-      });
-    } else {
-      listeners.apply(void 0, args);
-    }
-  }
-} // mount functional component
-
-function mount(Component, data) {
-  var instance = new Vue({
-    el: document.createElement('div'),
-    props: Component.props,
-    render: function render(h) {
-      return h(Component, _extends({
-        props: this.$props
-      }, data));
-    }
-  });
-  document.body.appendChild(instance.$el);
-  return instance;
-}
+/* harmony default export */ var es_icon = (icon_createComponent(Icon));
 ;// CONCATENATED MODULE: ./node_modules/vant/es/loading/index.js
 
 // Utils
 
  // Types
 
-var _createNamespace = createNamespace('loading'),
-    loading_createComponent = _createNamespace[0],
-    bem = _createNamespace[1];
+var loading_createNamespace = createNamespace('loading'),
+    loading_createComponent = loading_createNamespace[0],
+    loading_bem = loading_createNamespace[1];
 
 function LoadingIcon(h, props) {
   if (props.type === 'spinner') {
@@ -741,7 +869,7 @@ function LoadingIcon(h, props) {
   }
 
   return h("svg", {
-    "class": bem('circular'),
+    "class": loading_bem('circular'),
     "attrs": {
       "viewBox": "25 25 50 50"
     }
@@ -764,7 +892,7 @@ function LoadingText(h, props, slots) {
       color: (_props$textColor = props.textColor) != null ? _props$textColor : props.color
     };
     return h("span", {
-      "class": bem('text'),
+      "class": loading_bem('text'),
       "style": style
     }, [slots.default()]);
   }
@@ -785,11 +913,11 @@ function Loading(h, props, slots, ctx) {
   }
 
   return h("div", helper_default()([{
-    "class": bem([type, {
+    "class": loading_bem([type, {
       vertical: props.vertical
     }])
   }, inherit(ctx, true)]), [h("span", {
-    "class": bem('spinner', type),
+    "class": loading_bem('spinner', type),
     "style": style
   }, [LoadingIcon(h, props)]), LoadingText(h, props, slots)]);
 }
@@ -805,98 +933,210 @@ Loading.props = {
     default: 'circular'
   }
 };
-/* harmony default export */ var loading = (loading_createComponent(Loading));
-;// CONCATENATED MODULE: ./node_modules/vant/es/switch/index.js
+/* harmony default export */ var es_loading = (loading_createComponent(Loading));
+;// CONCATENATED MODULE: ./node_modules/vant/es/button/index.js
+
+
 // Utils
 
- // Mixins
+
 
  // Components
 
 
+ // Types
 
-var switch_createNamespace = createNamespace('switch'),
-    switch_createComponent = switch_createNamespace[0],
-    switch_bem = switch_createNamespace[1];
+var button_createNamespace = createNamespace('button'),
+    button_createComponent = button_createNamespace[0],
+    button_bem = button_createNamespace[1];
 
-/* harmony default export */ var es_switch = (switch_createComponent({
-  mixins: [FieldMixin],
-  props: switchProps,
-  computed: {
-    checked: function checked() {
-      return this.value === this.activeValue;
-    },
-    style: function style() {
-      return {
-        fontSize: addUnit(this.size),
-        backgroundColor: this.checked ? this.activeColor : this.inactiveColor
-      };
+function Button(h, props, slots, ctx) {
+  var _ref;
+
+  var tag = props.tag,
+      icon = props.icon,
+      type = props.type,
+      color = props.color,
+      plain = props.plain,
+      disabled = props.disabled,
+      loading = props.loading,
+      hairline = props.hairline,
+      loadingText = props.loadingText,
+      iconPosition = props.iconPosition;
+  var style = {};
+
+  if (color) {
+    style.color = plain ? color : 'white';
+
+    if (!plain) {
+      // Use background instead of backgroundColor to make linear-gradient work
+      style.background = color;
+    } // hide border when color is linear-gradient
+
+
+    if (color.indexOf('gradient') !== -1) {
+      style.border = 0;
+    } else {
+      style.borderColor = color;
     }
-  },
-  methods: {
-    onClick: function onClick(event) {
-      this.$emit('click', event);
-
-      if (!this.disabled && !this.loading) {
-        var newValue = this.checked ? this.inactiveValue : this.activeValue;
-        this.$emit('input', newValue);
-        this.$emit('change', newValue);
-      }
-    },
-    genLoading: function genLoading() {
-      var h = this.$createElement;
-
-      if (this.loading) {
-        var color = this.checked ? this.activeColor : this.inactiveColor;
-        return h(loading, {
-          "class": switch_bem('loading'),
-          "attrs": {
-            "color": color
-          }
-        });
-      }
-    }
-  },
-  render: function render() {
-    var h = arguments[0];
-    var checked = this.checked,
-        loading = this.loading,
-        disabled = this.disabled;
-    return h("div", {
-      "class": switch_bem({
-        on: checked,
-        loading: loading,
-        disabled: disabled
-      }),
-      "attrs": {
-        "role": "switch",
-        "aria-checked": String(checked)
-      },
-      "style": this.style,
-      "on": {
-        "click": this.onClick
-      }
-    }, [h("div", {
-      "class": switch_bem('node')
-    }, [this.genLoading()])]);
   }
-}));
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/babel-loader/lib/index.js!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./packages/switch/switch.vue?vue&type=script&lang=js
 
+  function onClick(event) {
+    if (props.loading) {
+      event.preventDefault();
+    }
 
-/* harmony default export */ var switchvue_type_script_lang_js = ({
-  name: 'd-switch',
-  components: {
-    [es_switch.name]: es_switch
+    if (!loading && !disabled) {
+      emit(ctx, 'click', event);
+      functionalRoute(ctx);
+    }
+  }
+
+  function onTouchstart(event) {
+    emit(ctx, 'touchstart', event);
+  }
+
+  var classes = [button_bem([type, props.size, {
+    plain: plain,
+    loading: loading,
+    disabled: disabled,
+    hairline: hairline,
+    block: props.block,
+    round: props.round,
+    square: props.square
+  }]), (_ref = {}, _ref[BORDER_SURROUND] = hairline, _ref)];
+
+  function renderIcon() {
+    if (loading) {
+      return slots.loading ? slots.loading() : h(es_loading, {
+        "class": button_bem('loading'),
+        "attrs": {
+          "size": props.loadingSize,
+          "type": props.loadingType,
+          "color": "currentColor"
+        }
+      });
+    }
+
+    if (slots.icon) {
+      return h("div", {
+        "class": button_bem('icon')
+      }, [slots.icon()]);
+    }
+
+    if (icon) {
+      return h(es_icon, {
+        "attrs": {
+          "name": icon,
+          "classPrefix": props.iconPrefix
+        },
+        "class": button_bem('icon')
+      });
+    }
+  }
+
+  function renderContent() {
+    var content = [];
+
+    if (iconPosition === 'left') {
+      content.push(renderIcon());
+    }
+
+    var text;
+
+    if (loading) {
+      text = loadingText;
+    } else {
+      text = slots.default ? slots.default() : props.text;
+    }
+
+    if (text) {
+      content.push(h("span", {
+        "class": button_bem('text')
+      }, [text]));
+    }
+
+    if (iconPosition === 'right') {
+      content.push(renderIcon());
+    }
+
+    return content;
+  }
+
+  return h(tag, helper_default()([{
+    "style": style,
+    "class": classes,
+    "attrs": {
+      "type": props.nativeType,
+      "disabled": disabled
+    },
+    "on": {
+      "click": onClick,
+      "touchstart": onTouchstart
+    }
+  }, inherit(ctx)]), [h("div", {
+    "class": button_bem('content')
+  }, [renderContent()])]);
+}
+
+Button.props = extends_extends({}, routeProps, {
+  text: String,
+  icon: String,
+  color: String,
+  block: Boolean,
+  plain: Boolean,
+  round: Boolean,
+  square: Boolean,
+  loading: Boolean,
+  hairline: Boolean,
+  disabled: Boolean,
+  iconPrefix: String,
+  nativeType: String,
+  loadingText: String,
+  loadingType: String,
+  tag: {
+    type: String,
+    default: 'button'
   },
-  data() {
-    return {
-      checked: true
-    };
+  type: {
+    type: String,
+    default: 'default'
+  },
+  size: {
+    type: String,
+    default: 'normal'
+  },
+  loadingSize: {
+    type: String,
+    default: '20px'
+  },
+  iconPosition: {
+    type: String,
+    default: 'left'
   }
 });
-;// CONCATENATED MODULE: ./packages/switch/switch.vue?vue&type=script&lang=js
- /* harmony default export */ var switch_switchvue_type_script_lang_js = (switchvue_type_script_lang_js); 
+/* harmony default export */ var es_button = (button_createComponent(Button));
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/babel-loader/lib/index.js!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./packages/button/button.vue?vue&type=script&lang=js
+
+
+/* harmony default export */ var buttonvue_type_script_lang_js = ({
+  name: 'd-button',
+  props: {
+    desc: String,
+    // eslint-disable-next-line vue/require-prop-type-constructor
+    required: true
+  },
+  components: {
+    [es_button.name]: es_button
+  },
+  methods: {
+    // handleClick(){
+    //     console.log("按钮点击被调用")
+    // }
+  }
+});
+;// CONCATENATED MODULE: ./packages/button/button.vue?vue&type=script&lang=js
+ /* harmony default export */ var button_buttonvue_type_script_lang_js = (buttonvue_type_script_lang_js); 
 ;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/runtime/componentNormalizer.js
 /* globals __VUE_SSR_CONTEXT__ */
 
@@ -995,7 +1235,7 @@ function normalizeComponent(
   }
 }
 
-;// CONCATENATED MODULE: ./packages/switch/switch.vue
+;// CONCATENATED MODULE: ./packages/button/button.vue
 
 
 
@@ -1004,7 +1244,7 @@ function normalizeComponent(
 /* normalize component */
 ;
 var component = normalizeComponent(
-  switch_switchvue_type_script_lang_js,
+  button_buttonvue_type_script_lang_js,
   render,
   staticRenderFns,
   false,
@@ -1014,25 +1254,24 @@ var component = normalizeComponent(
   
 )
 
-/* harmony default export */ var switch_switch = (component.exports);
-;// CONCATENATED MODULE: ./packages/switch/package.json
-var package_namespaceObject = JSON.parse('{"u":"common-remote-switch"}');
-;// CONCATENATED MODULE: ./packages/switch/index.js
-// DSwitch
+/* harmony default export */ var button_button = (component.exports);
+;// CONCATENATED MODULE: ./packages/button/package.json
+var package_namespaceObject = JSON.parse('{"u":"common-remote-comp"}');
+;// CONCATENATED MODULE: ./packages/button/index.js
+// DButton
 
 
-switch_switch.install = function (Vue) {
-  Vue.component(`${package_namespaceObject.u}`, switch_switch);
+button_button.install = function (Vue) {
+  Vue.component(`${package_namespaceObject.u}`, button_button);
 };
-
-// 默认导出组件
 
 ;// CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib-no-default.js
 
 
 
 }();
-module.exports = __webpack_exports__;
+/******/ 	return __webpack_exports__;
 /******/ })()
 ;
-//# sourceMappingURL=common-remote-switch.common.js.map
+});
+//# sourceMappingURL=common-remote-button.umd.js.map

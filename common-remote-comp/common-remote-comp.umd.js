@@ -108,15 +108,7 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  Component: function() { return /* reexport */ button_button; },
-  "default": function() { return /* binding */ entry_lib; }
-});
-
-// NAMESPACE OBJECT: ./packages/index.js
-var packages_namespaceObject = {};
-__webpack_require__.r(packages_namespaceObject);
-__webpack_require__.d(packages_namespaceObject, {
-  w: function() { return button_button; }
+  Component: function() { return /* reexport */ button_button; }
 });
 
 ;// CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js
@@ -136,19 +128,15 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/babel-loader/lib/index.js!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./packages/button/button.vue?vue&type=template&id=552e77e5
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/babel-loader/lib/index.js!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./packages/button/button.vue?vue&type=template&id=76381a5b
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
-  return _c('div', {
-    on: {
-      "click": _vm.handleClick
-    }
-  }, [_c('van-button', {
+  return _c('div', [_c('van-button', _vm._g({
     attrs: {
       "type": "primary"
     }
-  }, [_vm._v(_vm._s(_vm.desc))])], 1);
+  }, _vm.$listeners), [_vm._v(_vm._s(_vm.desc))])], 1);
 };
 var staticRenderFns = [];
 
@@ -1142,9 +1130,9 @@ Button.props = extends_extends({}, routeProps, {
     [es_button.name]: es_button
   },
   methods: {
-    handleClick() {
-      console.log("按钮点击被调用");
-    }
+    // handleClick(){
+    //     console.log("按钮点击被调用")
+    // }
   }
 });
 ;// CONCATENATED MODULE: ./packages/button/button.vue?vue&type=script&lang=js
@@ -1267,31 +1255,18 @@ var component = normalizeComponent(
 )
 
 /* harmony default export */ var button_button = (component.exports);
-;// CONCATENATED MODULE: ./packages/package.json
+;// CONCATENATED MODULE: ./packages/button/package.json
 var package_namespaceObject = JSON.parse('{"u":"common-remote-comp"}');
-;// CONCATENATED MODULE: ./packages/index.js
+;// CONCATENATED MODULE: ./packages/button/index.js
+// DButton
 
 
-
-// const comps = [
-//     DButton
-// ]
-
-// export default (Vue) => {
-//   comps.forEach((comp) => {
-//     Vue.component(comp.name, comp);
-//   });
-// };
 button_button.install = function (Vue) {
   Vue.component(`${package_namespaceObject.u}`, button_button);
 };
 
-// 默认导出组件
+;// CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib-no-default.js
 
-;// CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
-
-
-/* harmony default export */ var entry_lib = (packages_namespaceObject["default"]);
 
 
 }();

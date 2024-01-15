@@ -6,6 +6,7 @@
 </template>
 <script>
 import { Image } from 'vant'
+
 export default {
     name:'d-image',
     components:{
