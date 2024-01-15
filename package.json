@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint",
     "lib:button": "vue-cli-service build --target lib packages/index.js --name common-remote-comp --dest common-remote-comp",
     "lib:image": "vue-cli-service build --target lib packages/index.js --name common-remote-image --dest common-remote-image",
+    "lib:switch": "vue-cli-service build --target lib packages/index.js --name common-remote-switch --dest common-remote-switch",
     "build": "node ./scripts/build.js"
   },
   "dependencies": {
