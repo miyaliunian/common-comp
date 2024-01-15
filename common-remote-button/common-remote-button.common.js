@@ -1239,13 +1239,13 @@ var component = normalizeComponent(
 
 /* harmony default export */ var button_button = (component.exports);
 ;// CONCATENATED MODULE: ./packages/button/package.json
-var package_namespaceObject = JSON.parse('{"u":"common-remote-comp"}');
+var package_namespaceObject = JSON.parse('{"u":"common-remote-comp","i":"0.0.1"}');
 ;// CONCATENATED MODULE: ./packages/button/index.js
 // DButton
 
 
 button_button.install = function (Vue) {
-  Vue.component(`${package_namespaceObject.u}`, button_button);
+  Vue.component(`${package_namespaceObject.u}-${package_namespaceObject.i}`, button_button);
 };
 
 ;// CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib-no-default.js

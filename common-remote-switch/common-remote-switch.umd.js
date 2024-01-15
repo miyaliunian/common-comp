@@ -1033,13 +1033,13 @@ var component = normalizeComponent(
 
 /* harmony default export */ var switch_switch = (component.exports);
 ;// CONCATENATED MODULE: ./packages/switch/package.json
-var package_namespaceObject = JSON.parse('{"u":"common-remote-switch"}');
+var package_namespaceObject = JSON.parse('{"u":"common-remote-switch","i":"0.0.1"}');
 ;// CONCATENATED MODULE: ./packages/switch/index.js
 // DSwitch
 
 
 switch_switch.install = function (Vue) {
-  Vue.component(`${package_namespaceObject.u}`, switch_switch);
+  Vue.component(`${package_namespaceObject.u}-${package_namespaceObject.i}`, switch_switch);
 };
 
 // 默认导出组件

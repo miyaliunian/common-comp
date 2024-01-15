@@ -1122,13 +1122,13 @@ var component = normalizeComponent(
 
 /* harmony default export */ var image_image = (component.exports);
 ;// CONCATENATED MODULE: ./packages/image/package.json
-var package_namespaceObject = JSON.parse('{"u":"common-remote-image"}');
+var package_namespaceObject = JSON.parse('{"u":"common-remote-image","i":"0.0.1"}');
 ;// CONCATENATED MODULE: ./packages/image/index.js
 // DImage
 
 
 image_image.install = function (Vue) {
-  Vue.component(`${package_namespaceObject.u}`, image_image);
+  Vue.component(`${package_namespaceObject.u}-${package_namespaceObject.i}`, image_image);
 };
 
 // 默认导出组件

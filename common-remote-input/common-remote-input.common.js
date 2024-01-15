@@ -1936,13 +1936,13 @@ var component = normalizeComponent(
 
 /* harmony default export */ var input = (component.exports);
 ;// CONCATENATED MODULE: ./packages/input/package.json
-var package_namespaceObject = JSON.parse('{"u":"common-remote-input"}');
+var package_namespaceObject = JSON.parse('{"u":"common-remote-input","i":"0.0.1"}');
 ;// CONCATENATED MODULE: ./packages/input/index.js
 // DImage
 
 
 input.install = function (Vue) {
-  Vue.component(`${package_namespaceObject.u}`, input);
+  Vue.component(`${package_namespaceObject.u}-${package_namespaceObject.i}`, input);
 };
 
 // 默认导出组件
