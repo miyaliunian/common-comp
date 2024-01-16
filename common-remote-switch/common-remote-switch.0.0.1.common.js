@@ -1,14 +1,4 @@
-(function webpackUniversalModuleDefinition(root, factory) {
-	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("vue"));
-	else if(typeof define === 'function' && define.amd)
-		define([], factory);
-	else if(typeof exports === 'object')
-		exports["common-remote-image"] = factory(require("vue"));
-	else
-		root["common-remote-image"] = factory(root["Vue"]);
-})((typeof self !== 'undefined' ? self : this), function(__WEBPACK_EXTERNAL_MODULE__203__) {
-return /******/ (function() { // webpackBootstrap
+/******/ (function() { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
@@ -17,13 +7,6 @@ return /******/ (function() { // webpackBootstrap
 
 function _extends(){return _extends=Object.assign?Object.assign.bind():function(a){for(var b,c=1;c<arguments.length;c++)for(var d in b=arguments[c],b)Object.prototype.hasOwnProperty.call(b,d)&&(a[d]=b[d]);return a},_extends.apply(this,arguments)}var normalMerge=["attrs","props","domProps"],toArrayMerge=["class","style","directives"],functionalMerge=["on","nativeOn"],mergeJsxProps=function(a){return a.reduce(function(c,a){for(var b in a)if(!c[b])c[b]=a[b];else if(-1!==normalMerge.indexOf(b))c[b]=_extends({},c[b],a[b]);else if(-1!==toArrayMerge.indexOf(b)){var d=c[b]instanceof Array?c[b]:[c[b]],e=a[b]instanceof Array?a[b]:[a[b]];c[b]=[].concat(d,e)}else if(-1!==functionalMerge.indexOf(b)){for(var f in a[b])if(c[b][f]){var g=c[b][f]instanceof Array?c[b][f]:[c[b][f]],h=a[b][f]instanceof Array?a[b][f]:[a[b][f]];c[b][f]=[].concat(g,h)}else c[b][f]=a[b][f];}else if("hook"===b)for(var i in a[b])c[b][i]=c[b][i]?mergeFn(c[b][i],a[b][i]):a[b][i];else c[b]=a[b];return c},{})},mergeFn=function(a,b){return function(){a&&a.apply(this,arguments),b&&b.apply(this,arguments)}};module.exports=mergeJsxProps;
 
-
-/***/ }),
-
-/***/ 203:
-/***/ (function(module) {
-
-module.exports = __WEBPACK_EXTERNAL_MODULE__203__;
 
 /***/ })
 
@@ -108,7 +91,7 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  Component: function() { return /* reexport */ image_image; }
+  Component: function() { return /* reexport */ switch_switch; }
 });
 
 ;// CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js
@@ -128,38 +111,35 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/babel-loader/lib/index.js!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./packages/image/image.vue?vue&type=template&id=0f9ebf0a
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/babel-loader/lib/index.js!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./packages/switch/switch.vue?vue&type=template&id=73eb97f2
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
-  return _c('van-image', _vm._b({
-    on: {
-      "click": _vm.imgClick
+  return _c('van-switch', _vm._g(_vm._b({
+    model: {
+      value: _vm.checked,
+      callback: function ($$v) {
+        _vm.checked = $$v;
+      },
+      expression: "checked"
     }
-  }, 'van-image', _vm.$attrs, false));
+  }, 'van-switch', _vm.$attrs, false), _vm.$listeners));
 };
 var staticRenderFns = [];
 
 ;// CONCATENATED MODULE: ./node_modules/vant/es/style/base.css
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./node_modules/vant/es/info/index.css
+;// CONCATENATED MODULE: ./node_modules/vant/es/loading/index.css
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./node_modules/vant/es/icon/index.css
+;// CONCATENATED MODULE: ./node_modules/vant/es/switch/index.css
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./node_modules/vant/es/image/index.css
-// extracted by mini-css-extract-plugin
-
-;// CONCATENATED MODULE: ./node_modules/vant/es/image/style/index.js
+;// CONCATENATED MODULE: ./node_modules/vant/es/switch/style/index.js
 
 
 
-
-// EXTERNAL MODULE: ./node_modules/@vue/babel-helper-vue-jsx-merge-props/dist/helper.js
-var helper = __webpack_require__(568);
-var helper_default = /*#__PURE__*/__webpack_require__.n(helper);
 ;// CONCATENATED MODULE: ./node_modules/vant/es/utils/create/bem.js
 /**
  * bem helper
@@ -200,9 +180,9 @@ function createBEM(name) {
     return "" + el + gen(el, mods);
   };
 }
-// EXTERNAL MODULE: external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
-var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__(203);
-var external_commonjs_vue_commonjs2_vue_root_Vue_default = /*#__PURE__*/__webpack_require__.n(external_commonjs_vue_commonjs2_vue_root_Vue_);
+;// CONCATENATED MODULE: external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
+var external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject = require("vue");
+var external_commonjs_vue_commonjs2_vue_root_Vue_default = /*#__PURE__*/__webpack_require__.n(external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject);
 ;// CONCATENATED MODULE: ./node_modules/vant/es/utils/index.js
 
 
@@ -619,6 +599,54 @@ function unitToPx(value) {
 
   return parseFloat(value);
 }
+;// CONCATENATED MODULE: ./node_modules/vant/es/switch/shared.js
+/**
+ * Common Switch Props
+ */
+var switchProps = {
+  size: [Number, String],
+  value: null,
+  loading: Boolean,
+  disabled: Boolean,
+  activeColor: String,
+  inactiveColor: String,
+  activeValue: {
+    type: null,
+    default: true
+  },
+  inactiveValue: {
+    type: null,
+    default: false
+  }
+};
+;// CONCATENATED MODULE: ./node_modules/vant/es/mixins/field.js
+var FieldMixin = {
+  inject: {
+    vanField: {
+      default: null
+    }
+  },
+  watch: {
+    value: function value() {
+      var field = this.vanField;
+
+      if (field) {
+        field.resetValidation();
+        field.validateWithTrigger('onChange');
+      }
+    }
+  },
+  created: function created() {
+    var field = this.vanField;
+
+    if (field && !field.children) {
+      field.children = this;
+    }
+  }
+};
+// EXTERNAL MODULE: ./node_modules/@vue/babel-helper-vue-jsx-merge-props/dist/helper.js
+var helper = __webpack_require__(568);
+var helper_default = /*#__PURE__*/__webpack_require__.n(helper);
 ;// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/extends.js
 function extends_extends() {
   extends_extends = Object.assign ? Object.assign.bind() : function (target) {
@@ -691,318 +719,184 @@ function mount(Component, data) {
   document.body.appendChild(instance.$el);
   return instance;
 }
-;// CONCATENATED MODULE: ./node_modules/vant/es/info/index.js
+;// CONCATENATED MODULE: ./node_modules/vant/es/loading/index.js
 
 // Utils
 
  // Types
 
-var _createNamespace = createNamespace('info'),
-    info_createComponent = _createNamespace[0],
+var _createNamespace = createNamespace('loading'),
+    loading_createComponent = _createNamespace[0],
     bem = _createNamespace[1];
 
-function Info(h, props, slots, ctx) {
-  var dot = props.dot,
-      info = props.info;
-  var showInfo = isDef(info) && info !== '';
+function LoadingIcon(h, props) {
+  if (props.type === 'spinner') {
+    var Spin = [];
 
-  if (!dot && !showInfo) {
-    return;
+    for (var i = 0; i < 12; i++) {
+      Spin.push(h("i"));
+    }
+
+    return Spin;
   }
 
-  return h("div", helper_default()([{
-    "class": bem({
-      dot: dot
-    })
-  }, inherit(ctx, true)]), [dot ? '' : props.info]);
-}
-
-Info.props = {
-  dot: Boolean,
-  info: [Number, String]
-};
-/* harmony default export */ var info = (info_createComponent(Info));
-;// CONCATENATED MODULE: ./node_modules/vant/es/icon/index.js
-
-// Utils
-
- // Components
-
- // Types
-
-var icon_createNamespace = createNamespace('icon'),
-    icon_createComponent = icon_createNamespace[0],
-    icon_bem = icon_createNamespace[1];
-
-function isImage(name) {
-  return name ? name.indexOf('/') !== -1 : false;
-} // compatible with legacy usage, should be removed in next major version
-
-
-var LEGACY_MAP = {
-  medel: 'medal',
-  'medel-o': 'medal-o',
-  'calender-o': 'calendar-o'
-};
-
-function correctName(name) {
-  return name && LEGACY_MAP[name] || name;
-}
-
-function Icon(h, props, slots, ctx) {
-  var _props$badge;
-
-  var name = correctName(props.name);
-  var imageIcon = isImage(name);
-
-  if (false) {}
-
-  return h(props.tag, helper_default()([{
-    "class": [props.classPrefix, imageIcon ? '' : props.classPrefix + "-" + name],
-    "style": {
-      color: props.color,
-      fontSize: addUnit(props.size)
-    }
-  }, inherit(ctx, true)]), [slots.default && slots.default(), imageIcon && h("img", {
-    "class": icon_bem('image'),
+  return h("svg", {
+    "class": bem('circular'),
     "attrs": {
-      "src": name
+      "viewBox": "25 25 50 50"
     }
-  }), h(info, {
+  }, [h("circle", {
     "attrs": {
-      "dot": props.dot,
-      "info": (_props$badge = props.badge) != null ? _props$badge : props.info
+      "cx": "50",
+      "cy": "50",
+      "r": "20",
+      "fill": "none"
     }
   })]);
 }
 
-Icon.props = {
-  dot: Boolean,
-  name: String,
-  size: [Number, String],
-  // @deprecated
-  // should be removed in next major version
-  info: [Number, String],
-  badge: [Number, String],
+function LoadingText(h, props, slots) {
+  if (slots.default) {
+    var _props$textColor;
+
+    var style = {
+      fontSize: addUnit(props.textSize),
+      color: (_props$textColor = props.textColor) != null ? _props$textColor : props.color
+    };
+    return h("span", {
+      "class": bem('text'),
+      "style": style
+    }, [slots.default()]);
+  }
+}
+
+function Loading(h, props, slots, ctx) {
+  var color = props.color,
+      size = props.size,
+      type = props.type;
+  var style = {
+    color: color
+  };
+
+  if (size) {
+    var iconSize = addUnit(size);
+    style.width = iconSize;
+    style.height = iconSize;
+  }
+
+  return h("div", helper_default()([{
+    "class": bem([type, {
+      vertical: props.vertical
+    }])
+  }, inherit(ctx, true)]), [h("span", {
+    "class": bem('spinner', type),
+    "style": style
+  }, [LoadingIcon(h, props)]), LoadingText(h, props, slots)]);
+}
+
+Loading.props = {
   color: String,
-  tag: {
+  size: [Number, String],
+  vertical: Boolean,
+  textSize: [Number, String],
+  textColor: String,
+  type: {
     type: String,
-    default: 'i'
-  },
-  classPrefix: {
-    type: String,
-    default: icon_bem()
+    default: 'circular'
   }
 };
-/* harmony default export */ var icon = (icon_createComponent(Icon));
-;// CONCATENATED MODULE: ./node_modules/vant/es/image/index.js
+/* harmony default export */ var loading = (loading_createComponent(Loading));
+;// CONCATENATED MODULE: ./node_modules/vant/es/switch/index.js
+// Utils
+
+ // Mixins
+
+ // Components
 
 
 
+var switch_createNamespace = createNamespace('switch'),
+    switch_createComponent = switch_createNamespace[0],
+    switch_bem = switch_createNamespace[1];
 
-
-var image_createNamespace = createNamespace('image'),
-    image_createComponent = image_createNamespace[0],
-    image_bem = image_createNamespace[1];
-
-/* harmony default export */ var es_image = (image_createComponent({
-  props: {
-    src: String,
-    fit: String,
-    alt: String,
-    round: Boolean,
-    width: [Number, String],
-    height: [Number, String],
-    radius: [Number, String],
-    lazyLoad: Boolean,
-    iconPrefix: String,
-    showError: {
-      type: Boolean,
-      default: true
-    },
-    showLoading: {
-      type: Boolean,
-      default: true
-    },
-    errorIcon: {
-      type: String,
-      default: 'photo-fail'
-    },
-    loadingIcon: {
-      type: String,
-      default: 'photo'
-    }
-  },
-  data: function data() {
-    return {
-      loading: true,
-      error: false
-    };
-  },
-  watch: {
-    src: function src() {
-      this.loading = true;
-      this.error = false;
-    }
-  },
+/* harmony default export */ var es_switch = (switch_createComponent({
+  mixins: [FieldMixin],
+  props: switchProps,
   computed: {
+    checked: function checked() {
+      return this.value === this.activeValue;
+    },
     style: function style() {
-      var style = {};
-
-      if (isDef(this.width)) {
-        style.width = addUnit(this.width);
-      }
-
-      if (isDef(this.height)) {
-        style.height = addUnit(this.height);
-      }
-
-      if (isDef(this.radius)) {
-        style.overflow = 'hidden';
-        style.borderRadius = addUnit(this.radius);
-      }
-
-      return style;
-    }
-  },
-  created: function created() {
-    var $Lazyload = this.$Lazyload;
-
-    if ($Lazyload && utils_inBrowser) {
-      $Lazyload.$on('loaded', this.onLazyLoaded);
-      $Lazyload.$on('error', this.onLazyLoadError);
-    }
-  },
-  beforeDestroy: function beforeDestroy() {
-    var $Lazyload = this.$Lazyload;
-
-    if ($Lazyload) {
-      $Lazyload.$off('loaded', this.onLazyLoaded);
-      $Lazyload.$off('error', this.onLazyLoadError);
+      return {
+        fontSize: addUnit(this.size),
+        backgroundColor: this.checked ? this.activeColor : this.inactiveColor
+      };
     }
   },
   methods: {
-    onLoad: function onLoad(event) {
-      this.loading = false;
-      this.$emit('load', event);
-    },
-    onLazyLoaded: function onLazyLoaded(_ref) {
-      var el = _ref.el;
-
-      if (el === this.$refs.image && this.loading) {
-        this.onLoad();
-      }
-    },
-    onLazyLoadError: function onLazyLoadError(_ref2) {
-      var el = _ref2.el;
-
-      if (el === this.$refs.image && !this.error) {
-        this.onError();
-      }
-    },
-    onError: function onError(event) {
-      this.error = true;
-      this.loading = false;
-      this.$emit('error', event);
-    },
     onClick: function onClick(event) {
       this.$emit('click', event);
-    },
-    genPlaceholder: function genPlaceholder() {
-      var h = this.$createElement;
 
-      if (this.loading && this.showLoading) {
-        return h("div", {
-          "class": image_bem('loading')
-        }, [this.slots('loading') || h(icon, {
-          "attrs": {
-            "name": this.loadingIcon,
-            "classPrefix": this.iconPrefix
-          },
-          "class": image_bem('loading-icon')
-        })]);
-      }
-
-      if (this.error && this.showError) {
-        return h("div", {
-          "class": image_bem('error')
-        }, [this.slots('error') || h(icon, {
-          "attrs": {
-            "name": this.errorIcon,
-            "classPrefix": this.iconPrefix
-          },
-          "class": image_bem('error-icon')
-        })]);
+      if (!this.disabled && !this.loading) {
+        var newValue = this.checked ? this.inactiveValue : this.activeValue;
+        this.$emit('input', newValue);
+        this.$emit('change', newValue);
       }
     },
-    genImage: function genImage() {
+    genLoading: function genLoading() {
       var h = this.$createElement;
-      var imgData = {
-        class: image_bem('img'),
-        attrs: {
-          alt: this.alt
-        },
-        style: {
-          objectFit: this.fit
-        }
-      };
 
-      if (this.error) {
-        return;
+      if (this.loading) {
+        var color = this.checked ? this.activeColor : this.inactiveColor;
+        return h(loading, {
+          "class": switch_bem('loading'),
+          "attrs": {
+            "color": color
+          }
+        });
       }
-
-      if (this.lazyLoad) {
-        return h("img", helper_default()([{
-          "ref": "image",
-          "directives": [{
-            name: "lazy",
-            value: this.src
-          }]
-        }, imgData]));
-      }
-
-      return h("img", helper_default()([{
-        "attrs": {
-          "src": this.src
-        },
-        "on": {
-          "load": this.onLoad,
-          "error": this.onError
-        }
-      }, imgData]));
     }
   },
   render: function render() {
     var h = arguments[0];
+    var checked = this.checked,
+        loading = this.loading,
+        disabled = this.disabled;
     return h("div", {
-      "class": image_bem({
-        round: this.round
+      "class": switch_bem({
+        on: checked,
+        loading: loading,
+        disabled: disabled
       }),
+      "attrs": {
+        "role": "switch",
+        "aria-checked": String(checked)
+      },
       "style": this.style,
       "on": {
         "click": this.onClick
       }
-    }, [this.genImage(), this.genPlaceholder(), this.slots()]);
+    }, [h("div", {
+      "class": switch_bem('node')
+    }, [this.genLoading()])]);
   }
 }));
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/babel-loader/lib/index.js!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./packages/image/image.vue?vue&type=script&lang=js
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/babel-loader/lib/index.js!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./packages/switch/switch.vue?vue&type=script&lang=js
 
 
-/* harmony default export */ var imagevue_type_script_lang_js = ({
-  name: 'd-image',
+/* harmony default export */ var switchvue_type_script_lang_js = ({
+  name: 'd-switch',
   components: {
-    [es_image.name]: es_image
+    [es_switch.name]: es_switch
   },
-  methods: {
-    imgClick() {
-      this.$emit("imgClick", {
-        data: "d-image回传的数据"
-      });
-    }
+  data() {
+    return {
+      checked: true
+    };
   }
 });
-;// CONCATENATED MODULE: ./packages/image/image.vue?vue&type=script&lang=js
- /* harmony default export */ var image_imagevue_type_script_lang_js = (imagevue_type_script_lang_js); 
+;// CONCATENATED MODULE: ./packages/switch/switch.vue?vue&type=script&lang=js
+ /* harmony default export */ var switch_switchvue_type_script_lang_js = (switchvue_type_script_lang_js); 
 ;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/runtime/componentNormalizer.js
 /* globals __VUE_SSR_CONTEXT__ */
 
@@ -1101,7 +995,7 @@ function normalizeComponent(
   }
 }
 
-;// CONCATENATED MODULE: ./packages/image/image.vue
+;// CONCATENATED MODULE: ./packages/switch/switch.vue
 
 
 
@@ -1110,7 +1004,7 @@ function normalizeComponent(
 /* normalize component */
 ;
 var component = normalizeComponent(
-  image_imagevue_type_script_lang_js,
+  switch_switchvue_type_script_lang_js,
   render,
   staticRenderFns,
   false,
@@ -1120,15 +1014,15 @@ var component = normalizeComponent(
   
 )
 
-/* harmony default export */ var image_image = (component.exports);
-;// CONCATENATED MODULE: ./packages/image/package.json
-var package_namespaceObject = JSON.parse('{"u":"common-remote-image","i":"0.0.1"}');
-;// CONCATENATED MODULE: ./packages/image/index.js
-// DImage
+/* harmony default export */ var switch_switch = (component.exports);
+;// CONCATENATED MODULE: ./packages/switch/package.json
+var package_namespaceObject = JSON.parse('{"u":"common-remote-switch","i":"0.0.1"}');
+;// CONCATENATED MODULE: ./packages/switch/index.js
+// DSwitch
 
 
-image_image.install = function (Vue) {
-  Vue.component(`${package_namespaceObject.u}-${package_namespaceObject.i}`, image_image);
+switch_switch.install = function (Vue) {
+  Vue.component(`${package_namespaceObject.u}.${package_namespaceObject.i}`, switch_switch);
 };
 
 // 默认导出组件
@@ -1138,8 +1032,7 @@ image_image.install = function (Vue) {
 
 
 }();
-/******/ 	return __webpack_exports__;
+module.exports = __webpack_exports__;
 /******/ })()
 ;
-});
-//# sourceMappingURL=common-remote-image.umd.js.map
+//# sourceMappingURL=common-remote-switch.0.0.1.common.js.map

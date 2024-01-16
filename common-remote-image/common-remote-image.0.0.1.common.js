@@ -91,7 +91,7 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  Component: function() { return /* reexport */ button_button; }
+  Component: function() { return /* reexport */ image_image; }
 });
 
 ;// CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js
@@ -111,15 +111,15 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/babel-loader/lib/index.js!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./packages/button/button.vue?vue&type=template&id=76381a5b
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/babel-loader/lib/index.js!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./packages/image/image.vue?vue&type=template&id=0f9ebf0a
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
-  return _c('div', [_c('van-button', _vm._g({
-    attrs: {
-      "type": "primary"
+  return _c('van-image', _vm._b({
+    on: {
+      "click": _vm.imgClick
     }
-  }, _vm.$listeners), [_vm._v(_vm._s(_vm.desc))])], 1);
+  }, 'van-image', _vm.$attrs, false));
 };
 var staticRenderFns = [];
 
@@ -132,33 +132,14 @@ var staticRenderFns = [];
 ;// CONCATENATED MODULE: ./node_modules/vant/es/icon/index.css
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./node_modules/vant/es/loading/index.css
+;// CONCATENATED MODULE: ./node_modules/vant/es/image/index.css
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./node_modules/vant/es/button/index.css
-// extracted by mini-css-extract-plugin
-
-;// CONCATENATED MODULE: ./node_modules/vant/es/button/style/index.js
+;// CONCATENATED MODULE: ./node_modules/vant/es/image/style/index.js
 
 
 
 
-
-;// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/extends.js
-function extends_extends() {
-  extends_extends = Object.assign ? Object.assign.bind() : function (target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-    return target;
-  };
-  return extends_extends.apply(this, arguments);
-}
 // EXTERNAL MODULE: ./node_modules/@vue/babel-helper-vue-jsx-merge-props/dist/helper.js
 var helper = __webpack_require__(568);
 var helper_default = /*#__PURE__*/__webpack_require__.n(helper);
@@ -549,111 +530,6 @@ function createNamespace(name) {
   name = 'van-' + name;
   return [createComponent(name), createBEM(name), createI18N(name)];
 }
-;// CONCATENATED MODULE: ./node_modules/vant/es/utils/functional.js
-
-
-var inheritKey = ['ref', 'key', 'style', 'class', 'attrs', 'refInFor', 'nativeOn', 'directives', 'staticClass', 'staticStyle'];
-var mapInheritKey = {
-  nativeOn: 'on'
-}; // inherit partial context, map nativeOn to on
-
-function inherit(context, inheritListeners) {
-  var result = inheritKey.reduce(function (obj, key) {
-    if (context.data[key]) {
-      obj[mapInheritKey[key] || key] = context.data[key];
-    }
-
-    return obj;
-  }, {});
-
-  if (inheritListeners) {
-    result.on = result.on || {};
-
-    extends_extends(result.on, context.data.on);
-  }
-
-  return result;
-} // emit event
-
-function emit(context, eventName) {
-  for (var _len = arguments.length, args = new Array(_len > 2 ? _len - 2 : 0), _key = 2; _key < _len; _key++) {
-    args[_key - 2] = arguments[_key];
-  }
-
-  var listeners = context.listeners[eventName];
-
-  if (listeners) {
-    if (Array.isArray(listeners)) {
-      listeners.forEach(function (listener) {
-        listener.apply(void 0, args);
-      });
-    } else {
-      listeners.apply(void 0, args);
-    }
-  }
-} // mount functional component
-
-function mount(Component, data) {
-  var instance = new Vue({
-    el: document.createElement('div'),
-    props: Component.props,
-    render: function render(h) {
-      return h(Component, _extends({
-        props: this.$props
-      }, data));
-    }
-  });
-  document.body.appendChild(instance.$el);
-  return instance;
-}
-;// CONCATENATED MODULE: ./node_modules/vant/es/utils/constant.js
-// color
-var RED = '#ee0a24'; // border
-
-var BORDER = 'van-hairline';
-var BORDER_TOP = BORDER + "--top";
-var BORDER_LEFT = BORDER + "--left";
-var BORDER_BOTTOM = BORDER + "--bottom";
-var BORDER_SURROUND = BORDER + "--surround";
-var BORDER_TOP_BOTTOM = BORDER + "--top-bottom";
-var BORDER_UNSET_TOP_BOTTOM = BORDER + "-unset--top-bottom";
-;// CONCATENATED MODULE: ./node_modules/vant/es/utils/router.js
-/**
- * Vue Router support
- */
-function isRedundantNavigation(err) {
-  return err.name === 'NavigationDuplicated' || // compatible with vue-router@3.3
-  err.message && err.message.indexOf('redundant navigation') !== -1;
-}
-
-function route(router, config) {
-  var to = config.to,
-      url = config.url,
-      replace = config.replace;
-
-  if (to && router) {
-    var promise = router[replace ? 'replace' : 'push'](to);
-    /* istanbul ignore else */
-
-    if (promise && promise.catch) {
-      promise.catch(function (err) {
-        if (err && !isRedundantNavigation(err)) {
-          throw err;
-        }
-      });
-    }
-  } else if (url) {
-    replace ? location.replace(url) : location.href = url;
-  }
-}
-function functionalRoute(context) {
-  route(context.parent && context.parent.$router, context.props);
-}
-var routeProps = {
-  url: String,
-  replace: Boolean,
-  to: [String, Object]
-};
 ;// CONCATENATED MODULE: ./node_modules/vant/es/utils/validate/number.js
 function isNumeric(val) {
   return /^\d+(\.\d+)?$/.test(val);
@@ -725,6 +601,78 @@ function unitToPx(value) {
   }
 
   return parseFloat(value);
+}
+;// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/extends.js
+function extends_extends() {
+  extends_extends = Object.assign ? Object.assign.bind() : function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+    return target;
+  };
+  return extends_extends.apply(this, arguments);
+}
+;// CONCATENATED MODULE: ./node_modules/vant/es/utils/functional.js
+
+
+var inheritKey = ['ref', 'key', 'style', 'class', 'attrs', 'refInFor', 'nativeOn', 'directives', 'staticClass', 'staticStyle'];
+var mapInheritKey = {
+  nativeOn: 'on'
+}; // inherit partial context, map nativeOn to on
+
+function inherit(context, inheritListeners) {
+  var result = inheritKey.reduce(function (obj, key) {
+    if (context.data[key]) {
+      obj[mapInheritKey[key] || key] = context.data[key];
+    }
+
+    return obj;
+  }, {});
+
+  if (inheritListeners) {
+    result.on = result.on || {};
+
+    extends_extends(result.on, context.data.on);
+  }
+
+  return result;
+} // emit event
+
+function emit(context, eventName) {
+  for (var _len = arguments.length, args = new Array(_len > 2 ? _len - 2 : 0), _key = 2; _key < _len; _key++) {
+    args[_key - 2] = arguments[_key];
+  }
+
+  var listeners = context.listeners[eventName];
+
+  if (listeners) {
+    if (Array.isArray(listeners)) {
+      listeners.forEach(function (listener) {
+        listener.apply(void 0, args);
+      });
+    } else {
+      listeners.apply(void 0, args);
+    }
+  }
+} // mount functional component
+
+function mount(Component, data) {
+  var instance = new Vue({
+    el: document.createElement('div'),
+    props: Component.props,
+    render: function render(h) {
+      return h(Component, _extends({
+        props: this.$props
+      }, data));
+    }
+  });
+  document.body.appendChild(instance.$el);
+  return instance;
 }
 ;// CONCATENATED MODULE: ./node_modules/vant/es/info/index.js
 
@@ -829,297 +777,215 @@ Icon.props = {
     default: icon_bem()
   }
 };
-/* harmony default export */ var es_icon = (icon_createComponent(Icon));
-;// CONCATENATED MODULE: ./node_modules/vant/es/loading/index.js
-
-// Utils
-
- // Types
-
-var loading_createNamespace = createNamespace('loading'),
-    loading_createComponent = loading_createNamespace[0],
-    loading_bem = loading_createNamespace[1];
-
-function LoadingIcon(h, props) {
-  if (props.type === 'spinner') {
-    var Spin = [];
-
-    for (var i = 0; i < 12; i++) {
-      Spin.push(h("i"));
-    }
-
-    return Spin;
-  }
-
-  return h("svg", {
-    "class": loading_bem('circular'),
-    "attrs": {
-      "viewBox": "25 25 50 50"
-    }
-  }, [h("circle", {
-    "attrs": {
-      "cx": "50",
-      "cy": "50",
-      "r": "20",
-      "fill": "none"
-    }
-  })]);
-}
-
-function LoadingText(h, props, slots) {
-  if (slots.default) {
-    var _props$textColor;
-
-    var style = {
-      fontSize: addUnit(props.textSize),
-      color: (_props$textColor = props.textColor) != null ? _props$textColor : props.color
-    };
-    return h("span", {
-      "class": loading_bem('text'),
-      "style": style
-    }, [slots.default()]);
-  }
-}
-
-function Loading(h, props, slots, ctx) {
-  var color = props.color,
-      size = props.size,
-      type = props.type;
-  var style = {
-    color: color
-  };
-
-  if (size) {
-    var iconSize = addUnit(size);
-    style.width = iconSize;
-    style.height = iconSize;
-  }
-
-  return h("div", helper_default()([{
-    "class": loading_bem([type, {
-      vertical: props.vertical
-    }])
-  }, inherit(ctx, true)]), [h("span", {
-    "class": loading_bem('spinner', type),
-    "style": style
-  }, [LoadingIcon(h, props)]), LoadingText(h, props, slots)]);
-}
-
-Loading.props = {
-  color: String,
-  size: [Number, String],
-  vertical: Boolean,
-  textSize: [Number, String],
-  textColor: String,
-  type: {
-    type: String,
-    default: 'circular'
-  }
-};
-/* harmony default export */ var es_loading = (loading_createComponent(Loading));
-;// CONCATENATED MODULE: ./node_modules/vant/es/button/index.js
-
-
-// Utils
+/* harmony default export */ var icon = (icon_createComponent(Icon));
+;// CONCATENATED MODULE: ./node_modules/vant/es/image/index.js
 
 
 
- // Components
 
 
- // Types
+var image_createNamespace = createNamespace('image'),
+    image_createComponent = image_createNamespace[0],
+    image_bem = image_createNamespace[1];
 
-var button_createNamespace = createNamespace('button'),
-    button_createComponent = button_createNamespace[0],
-    button_bem = button_createNamespace[1];
-
-function Button(h, props, slots, ctx) {
-  var _ref;
-
-  var tag = props.tag,
-      icon = props.icon,
-      type = props.type,
-      color = props.color,
-      plain = props.plain,
-      disabled = props.disabled,
-      loading = props.loading,
-      hairline = props.hairline,
-      loadingText = props.loadingText,
-      iconPosition = props.iconPosition;
-  var style = {};
-
-  if (color) {
-    style.color = plain ? color : 'white';
-
-    if (!plain) {
-      // Use background instead of backgroundColor to make linear-gradient work
-      style.background = color;
-    } // hide border when color is linear-gradient
-
-
-    if (color.indexOf('gradient') !== -1) {
-      style.border = 0;
-    } else {
-      style.borderColor = color;
-    }
-  }
-
-  function onClick(event) {
-    if (props.loading) {
-      event.preventDefault();
-    }
-
-    if (!loading && !disabled) {
-      emit(ctx, 'click', event);
-      functionalRoute(ctx);
-    }
-  }
-
-  function onTouchstart(event) {
-    emit(ctx, 'touchstart', event);
-  }
-
-  var classes = [button_bem([type, props.size, {
-    plain: plain,
-    loading: loading,
-    disabled: disabled,
-    hairline: hairline,
-    block: props.block,
-    round: props.round,
-    square: props.square
-  }]), (_ref = {}, _ref[BORDER_SURROUND] = hairline, _ref)];
-
-  function renderIcon() {
-    if (loading) {
-      return slots.loading ? slots.loading() : h(es_loading, {
-        "class": button_bem('loading'),
-        "attrs": {
-          "size": props.loadingSize,
-          "type": props.loadingType,
-          "color": "currentColor"
-        }
-      });
-    }
-
-    if (slots.icon) {
-      return h("div", {
-        "class": button_bem('icon')
-      }, [slots.icon()]);
-    }
-
-    if (icon) {
-      return h(es_icon, {
-        "attrs": {
-          "name": icon,
-          "classPrefix": props.iconPrefix
-        },
-        "class": button_bem('icon')
-      });
-    }
-  }
-
-  function renderContent() {
-    var content = [];
-
-    if (iconPosition === 'left') {
-      content.push(renderIcon());
-    }
-
-    var text;
-
-    if (loading) {
-      text = loadingText;
-    } else {
-      text = slots.default ? slots.default() : props.text;
-    }
-
-    if (text) {
-      content.push(h("span", {
-        "class": button_bem('text')
-      }, [text]));
-    }
-
-    if (iconPosition === 'right') {
-      content.push(renderIcon());
-    }
-
-    return content;
-  }
-
-  return h(tag, helper_default()([{
-    "style": style,
-    "class": classes,
-    "attrs": {
-      "type": props.nativeType,
-      "disabled": disabled
-    },
-    "on": {
-      "click": onClick,
-      "touchstart": onTouchstart
-    }
-  }, inherit(ctx)]), [h("div", {
-    "class": button_bem('content')
-  }, [renderContent()])]);
-}
-
-Button.props = extends_extends({}, routeProps, {
-  text: String,
-  icon: String,
-  color: String,
-  block: Boolean,
-  plain: Boolean,
-  round: Boolean,
-  square: Boolean,
-  loading: Boolean,
-  hairline: Boolean,
-  disabled: Boolean,
-  iconPrefix: String,
-  nativeType: String,
-  loadingText: String,
-  loadingType: String,
-  tag: {
-    type: String,
-    default: 'button'
-  },
-  type: {
-    type: String,
-    default: 'default'
-  },
-  size: {
-    type: String,
-    default: 'normal'
-  },
-  loadingSize: {
-    type: String,
-    default: '20px'
-  },
-  iconPosition: {
-    type: String,
-    default: 'left'
-  }
-});
-/* harmony default export */ var es_button = (button_createComponent(Button));
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/babel-loader/lib/index.js!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./packages/button/button.vue?vue&type=script&lang=js
-
-
-/* harmony default export */ var buttonvue_type_script_lang_js = ({
-  name: 'd-button',
+/* harmony default export */ var es_image = (image_createComponent({
   props: {
-    desc: String,
-    // eslint-disable-next-line vue/require-prop-type-constructor
-    required: true
+    src: String,
+    fit: String,
+    alt: String,
+    round: Boolean,
+    width: [Number, String],
+    height: [Number, String],
+    radius: [Number, String],
+    lazyLoad: Boolean,
+    iconPrefix: String,
+    showError: {
+      type: Boolean,
+      default: true
+    },
+    showLoading: {
+      type: Boolean,
+      default: true
+    },
+    errorIcon: {
+      type: String,
+      default: 'photo-fail'
+    },
+    loadingIcon: {
+      type: String,
+      default: 'photo'
+    }
   },
-  components: {
-    [es_button.name]: es_button
+  data: function data() {
+    return {
+      loading: true,
+      error: false
+    };
+  },
+  watch: {
+    src: function src() {
+      this.loading = true;
+      this.error = false;
+    }
+  },
+  computed: {
+    style: function style() {
+      var style = {};
+
+      if (isDef(this.width)) {
+        style.width = addUnit(this.width);
+      }
+
+      if (isDef(this.height)) {
+        style.height = addUnit(this.height);
+      }
+
+      if (isDef(this.radius)) {
+        style.overflow = 'hidden';
+        style.borderRadius = addUnit(this.radius);
+      }
+
+      return style;
+    }
+  },
+  created: function created() {
+    var $Lazyload = this.$Lazyload;
+
+    if ($Lazyload && utils_inBrowser) {
+      $Lazyload.$on('loaded', this.onLazyLoaded);
+      $Lazyload.$on('error', this.onLazyLoadError);
+    }
+  },
+  beforeDestroy: function beforeDestroy() {
+    var $Lazyload = this.$Lazyload;
+
+    if ($Lazyload) {
+      $Lazyload.$off('loaded', this.onLazyLoaded);
+      $Lazyload.$off('error', this.onLazyLoadError);
+    }
   },
   methods: {
-    // handleClick(){
-    //     console.log("按钮点击被调用")
-    // }
+    onLoad: function onLoad(event) {
+      this.loading = false;
+      this.$emit('load', event);
+    },
+    onLazyLoaded: function onLazyLoaded(_ref) {
+      var el = _ref.el;
+
+      if (el === this.$refs.image && this.loading) {
+        this.onLoad();
+      }
+    },
+    onLazyLoadError: function onLazyLoadError(_ref2) {
+      var el = _ref2.el;
+
+      if (el === this.$refs.image && !this.error) {
+        this.onError();
+      }
+    },
+    onError: function onError(event) {
+      this.error = true;
+      this.loading = false;
+      this.$emit('error', event);
+    },
+    onClick: function onClick(event) {
+      this.$emit('click', event);
+    },
+    genPlaceholder: function genPlaceholder() {
+      var h = this.$createElement;
+
+      if (this.loading && this.showLoading) {
+        return h("div", {
+          "class": image_bem('loading')
+        }, [this.slots('loading') || h(icon, {
+          "attrs": {
+            "name": this.loadingIcon,
+            "classPrefix": this.iconPrefix
+          },
+          "class": image_bem('loading-icon')
+        })]);
+      }
+
+      if (this.error && this.showError) {
+        return h("div", {
+          "class": image_bem('error')
+        }, [this.slots('error') || h(icon, {
+          "attrs": {
+            "name": this.errorIcon,
+            "classPrefix": this.iconPrefix
+          },
+          "class": image_bem('error-icon')
+        })]);
+      }
+    },
+    genImage: function genImage() {
+      var h = this.$createElement;
+      var imgData = {
+        class: image_bem('img'),
+        attrs: {
+          alt: this.alt
+        },
+        style: {
+          objectFit: this.fit
+        }
+      };
+
+      if (this.error) {
+        return;
+      }
+
+      if (this.lazyLoad) {
+        return h("img", helper_default()([{
+          "ref": "image",
+          "directives": [{
+            name: "lazy",
+            value: this.src
+          }]
+        }, imgData]));
+      }
+
+      return h("img", helper_default()([{
+        "attrs": {
+          "src": this.src
+        },
+        "on": {
+          "load": this.onLoad,
+          "error": this.onError
+        }
+      }, imgData]));
+    }
+  },
+  render: function render() {
+    var h = arguments[0];
+    return h("div", {
+      "class": image_bem({
+        round: this.round
+      }),
+      "style": this.style,
+      "on": {
+        "click": this.onClick
+      }
+    }, [this.genImage(), this.genPlaceholder(), this.slots()]);
+  }
+}));
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/babel-loader/lib/index.js!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./packages/image/image.vue?vue&type=script&lang=js
+
+
+/* harmony default export */ var imagevue_type_script_lang_js = ({
+  name: 'd-image',
+  components: {
+    [es_image.name]: es_image
+  },
+  methods: {
+    imgClick() {
+      this.$emit("imgClick", {
+        data: "d-image回传的数据"
+      });
+    }
   }
 });
-;// CONCATENATED MODULE: ./packages/button/button.vue?vue&type=script&lang=js
- /* harmony default export */ var button_buttonvue_type_script_lang_js = (buttonvue_type_script_lang_js); 
+;// CONCATENATED MODULE: ./packages/image/image.vue?vue&type=script&lang=js
+ /* harmony default export */ var image_imagevue_type_script_lang_js = (imagevue_type_script_lang_js); 
 ;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/runtime/componentNormalizer.js
 /* globals __VUE_SSR_CONTEXT__ */
 
@@ -1218,7 +1084,7 @@ function normalizeComponent(
   }
 }
 
-;// CONCATENATED MODULE: ./packages/button/button.vue
+;// CONCATENATED MODULE: ./packages/image/image.vue
 
 
 
@@ -1227,7 +1093,7 @@ function normalizeComponent(
 /* normalize component */
 ;
 var component = normalizeComponent(
-  button_buttonvue_type_script_lang_js,
+  image_imagevue_type_script_lang_js,
   render,
   staticRenderFns,
   false,
@@ -1237,16 +1103,26 @@ var component = normalizeComponent(
   
 )
 
-/* harmony default export */ var button_button = (component.exports);
-;// CONCATENATED MODULE: ./packages/button/package.json
-var package_namespaceObject = JSON.parse('{"u":"common-remote-comp","i":"0.0.1"}');
-;// CONCATENATED MODULE: ./packages/button/index.js
-// DButton
+/* harmony default export */ var image_image = (component.exports);
+;// CONCATENATED MODULE: ./packages/image/package.json
+var package_namespaceObject = JSON.parse('{"u":"common-remote-image","i":"0.0.1"}');
+;// CONCATENATED MODULE: ./packages/image/index.js
+/*
+ * @Author: 米亚流年 miyaliunian@gmail.com
+ * @Date: 2024-01-15 13:11:55
+ * @LastEditors: 米亚流年 miyaliunian@gmail.com
+ * @LastEditTime: 2024-01-16 08:47:09
+ * @FilePath: /common-comp/packages/image/index.js
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
+// DImage
 
 
-button_button.install = function (Vue) {
-  Vue.component(`${package_namespaceObject.u}-${package_namespaceObject.i}`, button_button);
+image_image.install = function (Vue) {
+  Vue.component(`${package_namespaceObject.u}.${package_namespaceObject.i}`, image_image);
 };
+
+// 默认导出组件
 
 ;// CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib-no-default.js
 
@@ -1256,4 +1132,4 @@ button_button.install = function (Vue) {
 module.exports = __webpack_exports__;
 /******/ })()
 ;
-//# sourceMappingURL=common-remote-button.common.js.map
+//# sourceMappingURL=common-remote-image.0.0.1.common.js.map

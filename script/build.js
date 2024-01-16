@@ -11,12 +11,10 @@ shell.ls('packages').forEach(file => {
 //     })
   } else {
     const config = require(path.resolve(`packages/${file}/package.json`));
-    console.log("config",config,'file',file)
-    console.log("entryPath",`packages/${file}/index.js`)
     scripts.push({
       type: 'package',
       filename: file,
-      script: `vue-cli-service build --target lib packages/${file}/index.js --name common-remote-${file} --dest common-remote-${file}`
+      script: `vue-cli-service build --target lib packages/${file}/index.js --name common-remote-${file}.${config.version} --dest common-remote-${file}`
     })
   }
 })

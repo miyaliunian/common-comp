@@ -1938,11 +1938,19 @@ var component = normalizeComponent(
 ;// CONCATENATED MODULE: ./packages/input/package.json
 var package_namespaceObject = JSON.parse('{"u":"common-remote-input","i":"0.0.1"}');
 ;// CONCATENATED MODULE: ./packages/input/index.js
+/*
+ * @Author: 米亚流年 miyaliunian@gmail.com
+ * @Date: 2024-01-15 14:18:05
+ * @LastEditors: 米亚流年 miyaliunian@gmail.com
+ * @LastEditTime: 2024-01-16 08:47:15
+ * @FilePath: /common-comp/packages/input/index.js
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 // DImage
 
 
 input.install = function (Vue) {
-  Vue.component(`${package_namespaceObject.u}-${package_namespaceObject.i}`, input);
+  Vue.component(`${package_namespaceObject.u}.${package_namespaceObject.i}`, input);
 };
 
 // 默认导出组件
@@ -1955,4 +1963,4 @@ input.install = function (Vue) {
 module.exports = __webpack_exports__;
 /******/ })()
 ;
-//# sourceMappingURL=common-remote-input.common.js.map
+//# sourceMappingURL=common-remote-input.0.0.1.common.js.map

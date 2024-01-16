@@ -1,4 +1,14 @@
-/******/ (function() { // webpackBootstrap
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory(require("vue"));
+	else if(typeof define === 'function' && define.amd)
+		define([], factory);
+	else if(typeof exports === 'object')
+		exports["common-remote-switch.0.0.1"] = factory(require("vue"));
+	else
+		root["common-remote-switch.0.0.1"] = factory(root["Vue"]);
+})((typeof self !== 'undefined' ? self : this), function(__WEBPACK_EXTERNAL_MODULE__203__) {
+return /******/ (function() { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
@@ -7,6 +17,13 @@
 
 function _extends(){return _extends=Object.assign?Object.assign.bind():function(a){for(var b,c=1;c<arguments.length;c++)for(var d in b=arguments[c],b)Object.prototype.hasOwnProperty.call(b,d)&&(a[d]=b[d]);return a},_extends.apply(this,arguments)}var normalMerge=["attrs","props","domProps"],toArrayMerge=["class","style","directives"],functionalMerge=["on","nativeOn"],mergeJsxProps=function(a){return a.reduce(function(c,a){for(var b in a)if(!c[b])c[b]=a[b];else if(-1!==normalMerge.indexOf(b))c[b]=_extends({},c[b],a[b]);else if(-1!==toArrayMerge.indexOf(b)){var d=c[b]instanceof Array?c[b]:[c[b]],e=a[b]instanceof Array?a[b]:[a[b]];c[b]=[].concat(d,e)}else if(-1!==functionalMerge.indexOf(b)){for(var f in a[b])if(c[b][f]){var g=c[b][f]instanceof Array?c[b][f]:[c[b][f]],h=a[b][f]instanceof Array?a[b][f]:[a[b][f]];c[b][f]=[].concat(g,h)}else c[b][f]=a[b][f];}else if("hook"===b)for(var i in a[b])c[b][i]=c[b][i]?mergeFn(c[b][i],a[b][i]):a[b][i];else c[b]=a[b];return c},{})},mergeFn=function(a,b){return function(){a&&a.apply(this,arguments),b&&b.apply(this,arguments)}};module.exports=mergeJsxProps;
 
+
+/***/ }),
+
+/***/ 203:
+/***/ (function(module) {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE__203__;
 
 /***/ })
 
@@ -111,7 +128,7 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/babel-loader/lib/index.js!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./packages/switch/switch.vue?vue&type=template&id=73eb97f2
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/babel-loader/lib/index.js!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./packages/switch/switch.vue?vue&type=template&id=73eb97f2
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -180,9 +197,9 @@ function createBEM(name) {
     return "" + el + gen(el, mods);
   };
 }
-;// CONCATENATED MODULE: external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
-var external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject = require("vue");
-var external_commonjs_vue_commonjs2_vue_root_Vue_default = /*#__PURE__*/__webpack_require__.n(external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject);
+// EXTERNAL MODULE: external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
+var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__(203);
+var external_commonjs_vue_commonjs2_vue_root_Vue_default = /*#__PURE__*/__webpack_require__.n(external_commonjs_vue_commonjs2_vue_root_Vue_);
 ;// CONCATENATED MODULE: ./node_modules/vant/es/utils/index.js
 
 
@@ -881,7 +898,7 @@ var switch_createNamespace = createNamespace('switch'),
     }, [this.genLoading()])]);
   }
 }));
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/babel-loader/lib/index.js!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./packages/switch/switch.vue?vue&type=script&lang=js
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/babel-loader/lib/index.js!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./packages/switch/switch.vue?vue&type=script&lang=js
 
 
 /* harmony default export */ var switchvue_type_script_lang_js = ({
@@ -1022,7 +1039,7 @@ var package_namespaceObject = JSON.parse('{"u":"common-remote-switch","i":"0.0.1
 
 
 switch_switch.install = function (Vue) {
-  Vue.component(`${package_namespaceObject.u}-${package_namespaceObject.i}`, switch_switch);
+  Vue.component(`${package_namespaceObject.u}.${package_namespaceObject.i}`, switch_switch);
 };
 
 // 默认导出组件
@@ -1032,7 +1049,8 @@ switch_switch.install = function (Vue) {
 
 
 }();
-module.exports = __webpack_exports__;
+/******/ 	return __webpack_exports__;
 /******/ })()
 ;
-//# sourceMappingURL=common-remote-switch.common.js.map
+});
+//# sourceMappingURL=common-remote-switch.0.0.1.umd.js.map
